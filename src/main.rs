@@ -251,7 +251,7 @@ impl<'a> LogReport<'a> {
             str.push_str(&format!("| {:<30} |", row_headers[idx]));
 
             row.iter()
-                .for_each(|row| str.push_str(&format!(" {:<10} |", row)));
+                .for_each(|row| str.push_str(&format!(" {:<10.3e} |", row)));
 
             println!("{}", str);
         });
